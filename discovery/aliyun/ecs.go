@@ -53,7 +53,7 @@ const (
 	ecsLabelUserID      = ecsLabel + "user_id"
 	ecsLabelTag         = ecsLabel + "tag_"
 
-	MaxPageLimit = 50 // it's limited by ecs describeInstances API
+	MaxPageLimit = 50 // MaxPageLimit is limited by ecs describeInstances API
 )
 
 var DefaultECSConfig = ECSConfig{
@@ -122,7 +122,7 @@ func (c *ECSConfig) UnmarshalYAML(unmarshal func(interface{}) error) error {
 	return nil
 }
 
-// Filter is the configuration tags for filtering ECS instances.
+// TagFilter is the configuration tags for filtering ECS instances.
 type TagFilter struct {
 	Key    string   `yaml:"key"`
 	Values []string `yaml:"values"`
